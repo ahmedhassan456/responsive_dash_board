@@ -9,7 +9,7 @@ class DashboearView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AdaptiveLayout(
-        mobileLayout: (context) => const SizedBox(), 
+        mobileLayout: (context) => const SizedBox(),
         tabletLayout: (context) => const SizedBox(),
         desktopLayout: (context) => const DashboardTesktopLayout(),
       ),
