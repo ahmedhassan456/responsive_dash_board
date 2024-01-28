@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reponsive_dash_board/models/drawer_item_model.dart';
+import 'package:reponsive_dash_board/models/user_info_model.dart';
 import 'package:reponsive_dash_board/utils/app_images.dart';
 import 'package:reponsive_dash_board/widgets/drawer/custom_list_tile.dart';
 import 'package:reponsive_dash_board/widgets/drawer/drawer_item_widget.dart';
@@ -22,9 +23,11 @@ class CustomDrawerWidget extends StatelessWidget {
                 right: 24.0,
               ),
               child: UserInfoListTile(
-                image: Assets.imagesFrame,
-                title: 'Lekan Okeowo',
-                subtitle: 'demo@gmail.com',
+                model: UserInfoModel(
+                  image: Assets.imagesFrame,
+                  title: 'Lekan Okeowo',
+                  subtitle: 'demo@gmail.com',
+                ),
               ),
             ),
           ),
