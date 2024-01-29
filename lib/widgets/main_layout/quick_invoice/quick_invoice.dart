@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:reponsive_dash_board/widgets/main_layout/quick_invoice/custom_item_name_and_amount.dart';
+import 'package:reponsive_dash_board/widgets/main_layout/quick_invoice/custom_send_and_details_money.dart';
 import 'package:reponsive_dash_board/widgets/main_layout/quick_invoice/latest_transaction.dart';
+import 'package:reponsive_dash_board/widgets/main_layout/quick_invoice/customer_name_and_email.dart';
 import 'package:reponsive_dash_board/widgets/main_layout/quick_invoice/quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -23,6 +26,18 @@ class QuickInvoice extends StatelessWidget {
             height: 24.0,
           ),
           LatestTransaction(),
+          SizedBox(
+            height: 48.0,
+          ),
+          CustomerNameAndEmail(),
+          SizedBox(
+            height: 24.0,
+          ),
+          CustomItemNameAndAmount(),
+          SizedBox(
+            height: 24.0,
+          ),
+          CustomSendAndDetailsMoney(),
         ],
       ),
     );

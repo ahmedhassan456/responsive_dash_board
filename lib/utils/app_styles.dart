@@ -43,7 +43,7 @@ abstract class AppStyles {
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
-  static const TextStyle styleSmiBold18 = TextStyle(
+  static const TextStyle styleSemiBold18 = TextStyle(
     color: Color(0xFF4EB7F2),
     fontSize: 18,
     fontFamily: 'Montserrat',

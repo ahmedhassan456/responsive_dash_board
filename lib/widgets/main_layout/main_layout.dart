@@ -7,11 +7,11 @@ class MainLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        AllExpenses(),
-        SizedBox(height: 24.0,),
-        QuickInvoice(),
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(child: AllExpenses()),
+        SliverToBoxAdapter(child: SizedBox(height: 24.0,)),
+        SliverToBoxAdapter(child: QuickInvoice()),
       ],
     );
   }
