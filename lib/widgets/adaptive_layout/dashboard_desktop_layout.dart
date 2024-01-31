@@ -12,7 +12,9 @@ class DashboardTesktopLayout extends StatelessWidget {
       backgroundColor: Color(0xFFFAFAFA),
       body: Row(
         children: [
-          Expanded(child: CustomDrawerWidget()),
+          Expanded(
+            child: CustomDrawerWidget(),
+          ),
           SizedBox(
             width: 32.0,
           ),
