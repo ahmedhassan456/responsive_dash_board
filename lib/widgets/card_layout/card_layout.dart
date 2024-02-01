@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reponsive_dash_board/utils/app_styles.dart';
-import 'package:reponsive_dash_board/widgets/card_layout/card_view.dart';
+import 'package:reponsive_dash_board/widgets/card_layout/my_card_page_view.dart';
 
 class CardLayout extends StatelessWidget {
   const CardLayout({super.key});
@@ -20,7 +20,7 @@ class CardLayout extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          CardView(),
+          Expanded(child: MyCardPageView()),
         ],
       ),
     );

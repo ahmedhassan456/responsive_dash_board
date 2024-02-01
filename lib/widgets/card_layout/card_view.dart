@@ -13,7 +13,9 @@ class CardView extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
-              image: AssetImage(Assets.imagesCardBackground)),
+            fit: BoxFit.fill,
+            image: AssetImage(Assets.imagesCardBackground),
+          ),
           color: const Color(0xFF4DB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -26,6 +28,7 @@ class CardView extends StatelessWidget {
               padding:
                   const EdgeInsets.only(top: 16.0, left: 31.0, right: 42.0),
               child: ListTile(
+                contentPadding: EdgeInsets.zero,
                 title: Text(
                   'Name card',
                   style: AppStyles.styleRegular16.copyWith(
@@ -43,6 +46,7 @@ class CardView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     '0918 8124 0042 8129',
@@ -61,7 +65,9 @@ class CardView extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20.0,),
+            const SizedBox(
+              height: 20.0,
+            ),
           ],
         ),
       ),
