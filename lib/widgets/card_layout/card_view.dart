@@ -20,6 +20,7 @@ class CardView extends StatelessWidget {
           ),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Padding(
               padding:
@@ -38,35 +39,29 @@ class CardView extends StatelessWidget {
                 trailing: SvgPicture.asset(Assets.imagesGallery),
               ),
             ),
-            const SizedBox(
-              height: 55.0,
-            ),
+            const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: Row(
+              padding: const EdgeInsets.only(right: 24.0),
+              child: Column(
                 children: [
-                  const Spacer(),
                   Text(
                     '0918 8124 0042 8129',
                     style:
                         AppStyles.styleSemiBold24.copyWith(color: Colors.white),
                   ),
+                  const SizedBox(
+                    height: 12.0,
+                  ),
+                  Text(
+                    '12/20 - 124',
+                    style: AppStyles.styleRegular16.copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 12.0,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  '12/20 - 124',
-                  style: AppStyles.styleRegular16.copyWith(color: Colors.white,),
-                ),
-              ),
-            ),
+            const SizedBox(height: 20.0,),
           ],
         ),
       ),
