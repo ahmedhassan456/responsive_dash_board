@@ -1,8 +1,14 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:reponsive_dash_board/views/dashboard_view.dart';
 
 void main() {
-  runApp(const RsponsiveDashboard());
+  runApp(
+  DevicePreview(
+    enabled: true,
+    builder: (context) => const RsponsiveDashboard(), // Wrap your app
+  ),
+);
 }
 
 class RsponsiveDashboard extends StatelessWidget {
@@ -11,6 +17,8 @@ class RsponsiveDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       title: 'Responsive Dashboard',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
