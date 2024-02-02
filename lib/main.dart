@@ -4,11 +4,11 @@ import 'package:reponsive_dash_board/views/dashboard_view.dart';
 
 void main() {
   runApp(
-  DevicePreview(
-    enabled: true,
-    builder: (context) => const RsponsiveDashboard(), // Wrap your app
-  ),
-);
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const RsponsiveDashboard(), // Wrap your app
+    ),
+  );
 }
 
 class RsponsiveDashboard extends StatelessWidget {
