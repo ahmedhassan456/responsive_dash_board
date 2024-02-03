@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reponsive_dash_board/widgets/card_and_transaction_and_income_layout/card_and_transaction_and_income_layout.dart';
+import 'package:reponsive_dash_board/widgets/adaptive_layout/dashboard_mobile_layout.dart';
 import 'package:reponsive_dash_board/widgets/drawer/custom_drawer_widget.dart';
-import 'package:reponsive_dash_board/widgets/main_layout/main_layout.dart';
 
 class DashboardTabletLayout extends StatelessWidget {
   const DashboardTabletLayout({super.key});
@@ -18,15 +17,7 @@ class DashboardTabletLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                MainLayout(),
-                SizedBox(height: 24.0,),
-                CardAndTransactionAndIncomeLayout(),
-              ],
-            ),
-          ),
+          child: DashboardMobileLayout(),
         ),
         SizedBox(
           width: 32.0,
