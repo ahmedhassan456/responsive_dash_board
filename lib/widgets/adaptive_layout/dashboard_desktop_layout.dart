@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reponsive_dash_board/widgets/card_and_transaction_layout/card_and_transaction_layout.dart';
+import 'package:reponsive_dash_board/widgets/card_and_transaction_and_income_layout/card_and_transaction_and_income_layout.dart';
 import 'package:reponsive_dash_board/widgets/drawer/custom_drawer_widget.dart';
 import 'package:reponsive_dash_board/widgets/main_layout/main_layout.dart';
 
@@ -27,7 +27,7 @@ class DashboardTesktopLayout extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: CardAndTransactionLayout(),
+            child: CardAndTransactionAndIncomeLayout(),
           ),
         ],
       ),

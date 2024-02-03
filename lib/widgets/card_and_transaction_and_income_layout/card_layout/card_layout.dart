@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reponsive_dash_board/utils/app_styles.dart';
-import 'package:reponsive_dash_board/widgets/card_and_transaction_layout/card_layout/dots_indicator.dart';
-import 'package:reponsive_dash_board/widgets/card_and_transaction_layout/card_layout/my_card_page_view.dart';
+import 'package:reponsive_dash_board/widgets/card_and_transaction_and_income_layout/card_layout/dots_indicator.dart';
+import 'package:reponsive_dash_board/widgets/card_and_transaction_and_income_layout/card_layout/my_card_page_view.dart';
 
 class CardLayout extends StatefulWidget {
   const CardLayout({super.key});
