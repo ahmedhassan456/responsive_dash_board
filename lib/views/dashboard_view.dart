@@ -1,42 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:reponsive_dash_board/widgets/adaptive_layout/adaptive_layout_widget.dart';
-import 'package:reponsive_dash_board/widgets/adaptive_layout/dashboard_desktop_layout.dart';
-import 'package:reponsive_dash_board/widgets/adaptive_layout/dashboard_mobile_layout.dart';
-import 'package:reponsive_dash_board/widgets/adaptive_layout/dashboard_tablet_layout.dart';
-import 'package:reponsive_dash_board/widgets/drawer/custom_drawer_widget.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
+import 'package:responsive_dash_board/widgets/adaptive_layout_widget.dart';
+import 'package:responsive_dash_board/widgets/custom_drawer.dart';
+import 'package:responsive_dash_board/widgets/dashboard_desktop_layout.dart';
+import 'package:responsive_dash_board/widgets/dashboard_mobile_layout.dart';
+import 'package:responsive_dash_board/widgets/dashboard_tablet_layout.dart';
 
-class DashboearView extends StatefulWidget {
-  const DashboearView({super.key});
+class DashBoradView extends StatefulWidget {
+  const DashBoradView({super.key});
 
   @override
-  State<DashboearView> createState() => _DashboearViewState();
+  State<DashBoradView> createState() => _DashBoradViewState();
 }
 
-class _DashboearViewState extends State<DashboearView> {
-  
+class _DashBoradViewState extends State<DashBoradView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
-      appBar: MediaQuery.sizeOf(context).width < 800 ? AppBar(
-        elevation: 0.0,
-        backgroundColor: const Color(0xFF4DB7F2),
-        leading: IconButton(
-          onPressed: (){
-            scaffoldKey.currentState!.openDrawer();
-          },
-          icon: const Icon(Icons.menu),
-        ),
-      ) : null,
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? AppBar(
+              elevation: 0,
+              backgroundColor: const Color(0xFFFAFAFA),
+              leading: IconButton(
+                  onPressed: () {
+                    scaffoldKey.currentState!.openDrawer();
+                  },
+                  icon: const Icon(Icons.menu)),
+            )
+          : null,
       backgroundColor: const Color(0xFFF7F9FA),
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? const CustomDrawer()
+          : null,
       body: AdaptiveLayout(
-        mobileLayout: (context) => const DashboardMobileLayout(),
-        tabletLayout: (context) => const DashboardTabletLayout(),
-        desktopLayout: (context) => const DashboardTesktopLayout(),
+        mobileLayout: (context) => const DashBoardMobileLayout(),
+        tabletLayout: (context) => const DashBoardTabletLayout(),
+        desktopLayout: (context) => const DashboardDesktopLayout(),
       ),
-      drawer: MediaQuery.sizeOf(context).width < 800 ? const CustomDrawerWidget() : null,
     );
   }
 }
