@@ -11,26 +11,21 @@ class CardAndTransactionAndIncomeLayout extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(24.0),
       color: Colors.white,
-      child: const CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(child: CardLayout()),
-          SliverToBoxAdapter(
-            child: Divider(
+      child: const SingleChildScrollView(
+        child: Column(
+          children: [
+            CardLayout(),
+            Divider(
               height: 40.0,
               color: Color(0xFFF1F1F1),
             ),
-          ),
-          SliverToBoxAdapter(child: TransactionLayout()),
-          SliverToBoxAdapter(
-            child: SizedBox(
+            TransactionLayout(),
+            SizedBox(
               height: 24.0,
             ),
-          ),
-          SliverFillRemaining(
-            hasScrollBody: true,
-            child: IncomeSection(),
-          ),
-        ],
+            IncomeSection(),
+          ],
+        ),
       ),
     );
   }
